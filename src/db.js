@@ -1,3 +1,4 @@
+/*
 const Pool = require("pg").Pool;
 
 const pool = new Pool({
@@ -17,6 +18,28 @@ user: "games_fjwx_user",
 });
 
 // Optional: Log connection status for debugging
+pool.on('connect', () => {
+    console.log("Successfully connected to the database");
+});
+
+pool.on('error', (err) => {
+    console.error("Database error:", err.stack);
+});
+
+module.exports = pool;
+
+*/
+
+
+const Pool = require("pg").Pool;
+
+console.log("DATABASE_URL:", process.env.DATABASE_URL); // Debug: Log the connection string
+
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL || "postgres://postgres:jaed1213@localhost:5433/API",
+    ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false
+});
+
 pool.on('connect', () => {
     console.log("Successfully connected to the database");
 });
