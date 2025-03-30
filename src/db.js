@@ -1,11 +1,19 @@
 const Pool = require("pg").Pool;
 
 const pool = new Pool({
-    user: "postgres",
-    host: "localhost",
-    password: "jaed1213",
-    database: "API",
-    port: 5433,
+   //local
+    //user: "postgres",
+    //host: "localhost",
+    //password: "jaed1213",
+    //database: "API",
+    //port: 5433,
+//RENDER
+user: "games_fjwx_user",
+    host: "dpg-cvkq1r8dl3ps738bt9dg-at",
+    password: "SPZbHKWFsDWpAAGJY0aoaUJrYix1rNx0",
+    database: "games_fjwx",
+    port: 5432,
+
 });
 
 // Optional: Log connection status for debugging
