@@ -9,7 +9,7 @@ const pool = new Pool({
     //port: 5433,
 //RENDER
 user: "games_fjwx_user",
-    host: "dpg-cvkq1r8dl3ps738bt9dg-a.ohio-postgres.render.com/games_fjwx",
+    host: "dpg-cvkq1r8dl3ps738bt9dg-a.ohio-postgres.render.com/",
     password: "SPZbHKWFsDWpAAGJY0aoaUJrYix1rNx0",
     database: "games_fjwx",
     port: 5432,
