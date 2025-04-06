@@ -1,24 +1,20 @@
-/*
-
 const Pool = require("pg").Pool;
 
 const pool = new Pool({
-
-    //user: "postgres",
-    //host: "localhost",
-    //password: "jaed1213",
-    //database: "API",
-    //port: 5433,
+    user: "postgres",
+    host: "localhost",
+    password: "jaed1213",
+    database: "API",
+    port: 5433,
     // RENDER
-    
+    /*
     user: "games_fjwx_user",
     host: "dpg-cvkq1r8dl3ps738bt9dg-a.ohio-postgres.render.com",
     password: "SPZbHKWFsDWpAAGJY0aoaUJrYix1rNx0",
     database: "games_fjwx",
     port: 5432,
-    
+    */
 });
-
 
 // Optional: Log connection status for debugging
 pool.on('connect', () => {
@@ -30,8 +26,8 @@ pool.on('error', (err) => {
 });
 
 module.exports = pool;
-*/
 
+/*
 const Pool = require("pg").Pool;
 
 console.log("DATABASE_URL:", process.env.DATABASE_URL); // Debug: Log the connection string
@@ -50,4 +46,4 @@ pool.on('error', (err) => {
 });
 
 module.exports = pool;
-
+*/
