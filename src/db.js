@@ -1,38 +1,22 @@
 const Pool = require("pg").Pool;
 
 const pool = new Pool({
-<<<<<<< HEAD
+
+    //user: "postgres",
+    //host: "localhost",
+    //password: "jaed1213",
+    //database: "API",
+    //port: 5433,
+    // RENDER
+    
     user: "games_fjwx_user",
     host: "dpg-cvkq1r8dl3ps738bt9dg-a.ohio-postgres.render.com",
     password: "SPZbHKWFsDWpAAGJY0aoaUJrYix1rNx0",
     database: "games_fjwx",
     port: 5432,
-    ssl: { rejectUnauthorized: false } // Required for Render's PostgreSQL
+    
 });
 
-// Local configuration (commented out)
-/*
-const pool = new Pool({
-=======
->>>>>>> dev
-    user: "postgres",
-    host: "localhost",
-    password: "jaed1213",
-    database: "API",
-    port: 5433,
-<<<<<<< HEAD
-=======
-    // RENDER
-    /*
-    user: "games_fjwx_user",
-    host: "dpg-cvkq1r8dl3ps738bt9dg-a.ohio-postgres.render.com",
-    password: "SPZbHKWFsDWpAAGJY0aoaUJrYix1rNx0",
-    database: "games_fjwx",
-    port: 5432,
-    */
->>>>>>> dev
-});
-*/
 
 // Optional: Log connection status for debugging
 pool.on('connect', () => {
@@ -43,9 +27,6 @@ pool.on('error', (err) => {
     console.error("Database error:", err.stack);
 });
 
-<<<<<<< HEAD
-module.exports = pool;
-=======
 module.exports = pool;
 
 /*
@@ -68,4 +49,3 @@ pool.on('error', (err) => {
 
 module.exports = pool;
 */
->>>>>>> dev
