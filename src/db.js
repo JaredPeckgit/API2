@@ -1,3 +1,5 @@
+/*
+
 const Pool = require("pg").Pool;
 
 const pool = new Pool({
@@ -28,8 +30,8 @@ pool.on('error', (err) => {
 });
 
 module.exports = pool;
+*/
 
-/*
 const Pool = require("pg").Pool;
 
 console.log("DATABASE_URL:", process.env.DATABASE_URL); // Debug: Log the connection string
@@ -48,4 +50,4 @@ pool.on('error', (err) => {
 });
 
 module.exports = pool;
-*/
+
