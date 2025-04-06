@@ -1,6 +1,7 @@
 const getGames = "SELECT * FROM games";
-const getGamesById = "SELECT * FROM games where gameid = $1"
+const getGamesById = "SELECT * FROM games WHERE id = $1";
 
 module.exports = {
     getGames,
+    getGamesById,
 };
