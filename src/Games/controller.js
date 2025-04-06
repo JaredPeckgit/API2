@@ -53,9 +53,26 @@ const postGames = (req, res) => {
     });
 };
 
+const putGames = (req, res) => {
+    console.log("Executing postGames");
+    const {title,year,platform} = req.body;
+    
+
+   
+    pool.query(queries.putGames, [title,year,platform],(error, results) => {
+        if (error) {
+            console.error("Query error:", error);
+            return res.status(500).send("Database error occurred");
+        }
+        console.log("getGames results:", results.rows);
+        res.status(200).json(results.rows);
+    });
+}
+
 
 module.exports = {
     getGames,
     getGamesById,
     postGames,
+    putGames,
 };
