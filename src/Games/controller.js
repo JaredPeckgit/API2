@@ -54,12 +54,13 @@ const postGames = (req, res) => {
 };
 
 const putGames = (req, res) => {
-    console.log("Executing postGames");
+    console.log("Executing putGames");
+    const gameId = parseInt(req.params.id); // Added gameId
     const {title,year,platform} = req.body;
     
 
    
-    pool.query(queries.putGames, [title,year,platform],(error, results) => {
+    pool.query(queries.putGames, [title,year,platform,gameId],(error, results) => {
         if (error) {
             console.error("Query error:", error);
             return res.status(500).send("Database error occurred");
