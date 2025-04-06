@@ -17,6 +17,6 @@ router.get('/:id', (req, res) => {
 
 router.post('/', controller.postGames);
 
-router.put('/', controller.putGames)
+router.put('/:id', controller.putGames)
 
 module.exports = router;
