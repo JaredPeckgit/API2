@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-
+const helmet = require("helmet");
 const gamesRoutes = require("./src/Games/routes");
 
 const port = 8004;
@@ -18,3 +18,5 @@ console.log("Mounting routes at /api/v1/games");
 app.use("/api/v1/games", gamesRoutes);
 
 app.listen(port, () => console.log(`Running on port ${port}`));
+
+app.use(helmet());

@@ -1,14 +1,16 @@
-const Pool = require("pg").Pool;
+const { Pool } = require('pg');
+require('dotenv').config(); // Load environment variables from .env file
 
 const pool = new Pool({
-    user: "games_fjwx_user",
-    host: "dpg-cvkq1r8dl3ps738bt9dg-a.ohio-postgres.render.com",
-    password: "SPZbHKWFsDWpAAGJY0aoaUJrYix1rNx0",
-    database: "games_fjwx",
-    port: 5432,
-    ssl: { rejectUnauthorized: false } // Required for Render's PostgreSQL
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
+    ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false
 });
 
+module.exports = pool;
 // Local configuration (commented out)
 /*
 const pool = new Pool({
